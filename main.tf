@@ -12,6 +12,7 @@ resource "aws_s3_bucket" "dev" {
   bucket = "${var.dev_prefix}-${random_pet.petname.id}"
   acl    = "public-read"
 
+
   policy = <<EOF
 {
     "Version": "2012-10-17",
